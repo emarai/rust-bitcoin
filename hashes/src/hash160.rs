@@ -8,6 +8,8 @@
 //! HASH160 (SHA256 then RIPEMD160) implementation.
 
 use crate::{ripemd160, sha256};
+use borsh::BorshSchema;
+use crate::alloc::string::ToString;
 
 crate::internal_macros::general_hash_type! {
     160,

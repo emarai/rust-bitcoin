@@ -5,6 +5,8 @@
 use core::cmp;
 
 use crate::{incomplete_block_len, HashEngine as _};
+use borsh::BorshSchema;
+use crate::alloc::string::ToString;
 
 crate::internal_macros::general_hash_type! {
     512,

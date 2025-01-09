@@ -26,6 +26,8 @@ small-hash = []
 hex = { package = "hex-conservative", version = "0.3.0", default-features = false, optional = true }
 bitcoin-io = { version = "0.2.0", default-features = false, optional = true }
 serde = { version = "1.0", default-features = false, optional = true }
+borsh = { version = "1.5.3", features = ["unstable__schema"] }
+
 
 [dev-dependencies]
 serde_test = "1.0"

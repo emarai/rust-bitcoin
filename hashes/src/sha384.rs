@@ -3,6 +3,8 @@
 //! SHA384 implementation.
 
 use crate::sha512;
+use borsh::BorshSchema;
+use crate::alloc::string::ToString;
 
 crate::internal_macros::general_hash_type! {
     384,

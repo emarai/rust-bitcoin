@@ -8,6 +8,8 @@
 //! <https://eprint.iacr.org/2010/548.pdf>.
 
 use crate::sha512;
+use borsh::BorshSchema;
+use crate::alloc::string::ToString;
 
 crate::internal_macros::general_hash_type! {
     256,

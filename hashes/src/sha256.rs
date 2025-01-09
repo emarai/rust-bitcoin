@@ -11,6 +11,8 @@ use core::{cmp, convert, fmt};
 use crate::{incomplete_block_len, sha256d, HashEngine as _};
 #[cfg(doc)]
 use crate::{sha256t, sha256t_tag};
+use borsh::BorshSchema;
+use crate::alloc::string::ToString;
 
 crate::internal_macros::general_hash_type! {
     256,

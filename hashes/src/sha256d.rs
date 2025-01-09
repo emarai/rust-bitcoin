@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: CC0-1.0
 
 //! SHA256d implementation (double SHA256).
+use borsh::BorshSchema;
+use crate::alloc::string::ToString;
 
 use crate::sha256;
 

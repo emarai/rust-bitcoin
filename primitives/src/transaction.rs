@@ -17,6 +17,7 @@ use core::fmt;
 
 #[cfg(feature = "arbitrary")]
 use arbitrary::{Arbitrary, Unstructured};
+use borsh::BorshSchema;
 use hashes::sha256d;
 #[cfg(feature = "alloc")]
 use internals::{compact_size, write_err};
@@ -362,7 +363,7 @@ impl TxOut {
 /// ### Bitcoin Core References
 ///
 /// * [COutPoint definition](https://github.com/bitcoin/bitcoin/blob/345457b542b6a980ccfbc868af0970a6f91d1b82/src/primitives/transaction.h#L26)
-#[derive(Copy, Clone, Debug, Eq, Hash, PartialEq, PartialOrd, Ord)]
+#[derive(Copy, Clone, Debug, Eq, Hash, PartialEq, PartialOrd, Ord, BorshSchema)]
 pub struct OutPoint {
     /// The referenced transaction's txid.
     pub txid: Txid,
@@ -486,6 +487,7 @@ hashes::hash_newtype! {
     /// trait operations.
     ///
     /// See [`hashes::Hash::DISPLAY_BACKWARD`] for more details.
+    #[derive(BorshSchema)]
     pub struct Txid(sha256d::Hash);
 
     /// A bitcoin witness transaction ID.

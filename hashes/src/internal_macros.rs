@@ -105,7 +105,7 @@ pub(crate) use general_hash_type;
 macro_rules! hash_type_no_default {
     ($bits:expr, $reverse:expr, $doc:literal) => {
         #[doc = $doc]
-        #[derive(Copy, Clone, PartialEq, Eq, PartialOrd, Ord, Hash)]
+        #[derive(Copy, Clone, PartialEq, Eq, PartialOrd, Ord, Hash, BorshSchema)]
         #[repr(transparent)]
         pub struct Hash([u8; $bits / 8]);
 

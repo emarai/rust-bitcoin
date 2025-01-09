@@ -5,6 +5,8 @@
 use core::{cmp, mem};
 
 use crate::HashEngine as _;
+use borsh::BorshSchema;
+use crate::alloc::string::ToString;
 
 crate::internal_macros::hash_type_no_default! {
     64,
